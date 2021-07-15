@@ -233,7 +233,6 @@ string LinuxParser::Uid(int pid) {
 // REMOVE: [[maybe_unused]] once you define the function
 string LinuxParser::User(int pid) {
   string uid = LinuxParser::Uid(pid);
-  // std::cout << uid << std::endl;
   string line, usr, id, str;
   std::ifstream stream(kPasswordPath);
   if (stream.is_open()) {
