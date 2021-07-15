@@ -22,7 +22,7 @@ float Processor::Utilization() {
   nice = nice - guestnice;
   idle = idle + iowait;
   system = system + irq + softirq;
-  float vtime = guest + guestnice;
+
 
   // repeat
   float PrevIdle = previdle + previowait;
