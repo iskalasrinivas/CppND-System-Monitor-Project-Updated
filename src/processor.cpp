@@ -6,7 +6,6 @@ float Processor::Utilization() {
 
   float user, nice, system, idle, iowait, irq, softirq, steal, guest, guestnice;
 
-
   user = std::stof(cpu[LinuxParser::kUser_]);
   nice = std::stof(cpu[LinuxParser::kUser_]);
   system = std::stof(cpu[LinuxParser::kSystem_]);
@@ -22,7 +21,6 @@ float Processor::Utilization() {
   nice = nice - guestnice;
   idle = idle + iowait;
   system = system + irq + softirq;
-
 
   // repeat
   float PrevIdle = previdle + previowait;
